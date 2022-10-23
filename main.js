@@ -1,3 +1,4 @@
+const config = require('./config.json');
 const { Client, GatewayIntentBits } = require('discord.js');
 const client = new Client({intents: [
     GatewayIntentBits.Guilds,
@@ -22,4 +23,4 @@ client.on('messageCreate', (message) => {
     });
 });
 
-client.login("MTAzMzc2NDQxNTY3MTEwNzY0NA.G7m-rh.42_44gowDrfg32e_RsmClkr3Cygodx4aWPp6Ds");
+client.login(config.token);
